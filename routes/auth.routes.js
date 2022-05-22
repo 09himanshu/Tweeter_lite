@@ -1,5 +1,10 @@
 const controller = require('../controller/auth.controller');
+const {verify} = require('../middleware');
 
 module.exports = (app) => {
-    app.post('/signup', controller.signup);
+    // Signup routes
+    app.post('/signup',[verify.verify.authVerify], controller.signup);
+
+    // Signin routes
+    app.post('/signin', controller.signin);
 }

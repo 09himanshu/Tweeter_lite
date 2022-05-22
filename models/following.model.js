@@ -1,12 +1,12 @@
 module.exports = (sequelize, Sequelize) => {
-    const Following = sequelize.define('follower', {
-        userId: {
-            type: Sequelize.INTEGER,
+    const Following = sequelize.define("following", {
+        username: {
+            type: Sequelize.STRING,
             allowNull: false
         },
-        followingId: {
-            type: Sequelize.INTEGER,
-            allowNull: false
+        FollowingId: {
+            type: Sequelize.STRING,
+            alllowNull: false
         }
     });
     return Following;

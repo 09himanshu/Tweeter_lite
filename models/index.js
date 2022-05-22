@@ -34,6 +34,9 @@ db.user.belongsToMany(db.role, {
     otherKey: 'roleId',
 })
 
-
+// User relationship with other tables
+db.user.hasMany(db.tweet);
+db.user.hasMany(db.follower);
+db.user.hasMany(db.following);
 
 module.exports = db;

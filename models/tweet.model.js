@@ -4,6 +4,10 @@ module.exports = (sequelize,Sequelize) => {
         tweets : {
             type : Sequelize.STRING
         },
+        username: {
+            type : Sequelize.STRING,
+            allowNull: false
+        },
         date: {
             type: DataTypes.DATE,
             defaultValue: Date.now,

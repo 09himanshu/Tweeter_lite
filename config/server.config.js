@@ -9,6 +9,7 @@ module.exports = {
     user: process.env.user,
     password: process.env.password,
     dialect: process.env.dialect,
+    secretkey: process.env.secretkey,
     pool: {
         max: process.env.max,
         min: process.env.min,
